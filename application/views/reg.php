@@ -216,7 +216,7 @@
 });*/
 //-->
     $(function () {
-        /*$('#username').on('blur',function () {
+        /*$('#username').on('blur',function (e,param) {
             //console.log(this.value);
             //四个参数：url ，data ，callback ，dataType（返回的数据类型）
             $.get('welcome/check_name',{
@@ -229,7 +229,10 @@
                 }
             },'text');
             //alert('hahahhahhh');
-        })*/
+            if(param){
+                param.bSubmit=false;
+            }
+        });*/
         $('#email').on('blur',function (e,param) {
             if(this.value.indexOf('@')==-1){
                 //alert('请输入有效的email'); //会一直弹出
